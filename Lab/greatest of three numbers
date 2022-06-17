@@ -1,0 +1,21 @@
+QUESTION 2. 
+Write a Java Program to print greatest of three numbers 
+using if else
+
+ANSWER
+public class example {
+
+	public static void main(String[] args) {
+		int x=5,y=6,z=7;
+		if (x>y && x>z) {
+			System.out.println("x is the laregest number"+x);
+		}
+		else if (y>x && y>z) {
+			System.out.println("y is the largest nummber"+y);
+		}
+		else {
+			System.out.println("z is the largest number"+z);
+		}
+	}
+
+}
