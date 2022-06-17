@@ -1,0 +1,27 @@
+
+QUESTION 4
+Write a program to encrypt a grade by adding 8 to it. Also
+decrpyt it to show the corrent grade.
+
+ANSWER
+package javapgm;
+import java.util.*;
+public class example {
+
+	public static void main(String[] args) {
+		char y='P';
+		Scanner sc= new Scanner(System.in); 
+		System.out.print("Enter marks: ");
+		int x= sc.nextInt();
+		if (x>45) {
+			y=(char)(y+8);
+			System.out.println("Encrypted grade is:"+y);
+			y=(char)(y-8);
+			System.out.println("Decrypted grade is: "+y);	
+		}
+		else {
+			System.out.println("Enter marks above 45");
+		}
+	}
+
+}
