@@ -1,0 +1,46 @@
+QUESTION 3
+Write a Java Program to print the life period of the 
+user based on user's age
+childhood 1-10 years
+Adolescence 10-16 years
+Teenager 16-19 years 
+Young Adult 19-24
+Adult 24-35
+Middle Age 35-45
+Late Adult 45-60
+senior citizen 60 above			
+
+ANSWER
+import java.util.*;
+public class example {
+
+	public static void main(String[] args) {
+	
+		Scanner sc= new Scanner(System.in); 
+		System.out.print("Enter age: ");
+		int x= sc.nextInt();
+		if (x<10) {
+			System.out.println("childhood");
+		}
+		else if (x>=10 && x<16) {
+			System.out.println("Adolescence");
+		}
+		else if(x>=16 && x<19){
+			System.out.println("Teenager");
+		}
+		else if(x>=19 && x<24) {
+			System.out.println("young adult");
+			
+		}
+		else if(x>=24 && x<35) {
+			System.out.println("Adult");
+		}
+		else if(x>=35 && x<45) {
+			System.out.println("Middle Adult");}
+		else if(x>=45 && x<60) {
+			System.out.println("Late Adult");}
+		else if(x>=60) {
+			System.out.println("Senior citizen");}
+	}
+
+}
