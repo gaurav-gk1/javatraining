@@ -3,7 +3,7 @@ QUESTION 1.
 Write a Java Program to check given number is even or odd
 
 ANSWER
-public class evenodd{
+public class Evenodd{
 public static void main(String args[]){
 Scanner s= new Scanner(System.in);
 int x= s.nextInt();
