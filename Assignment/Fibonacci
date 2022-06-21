@@ -1,0 +1,17 @@
+public class Fibonacci {
+
+	public static void main(String[] args) {
+		int i,s=0,a=1,f;
+		System.out.println(s);
+		System.out.println(a);
+		for (i=2;i<=10;i++) {
+			f=s+a;
+			s=a;
+			a=f;
+			
+			System.out.println(f);
+		}
+
+	}
+
+}
