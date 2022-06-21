@@ -1,0 +1,20 @@
+public class Pallindrome {
+
+	public static void main(String[] args) {
+		int n=151,r,s=0,x;
+		x=n;
+		while (n!=0) {
+			r=n%10;
+			s=(s*10)+r;
+			n=n/10;
+		}
+		if (x==s){		
+			System.out.println("pallindrome");
+			
+		}
+		else {
+			System.out.println("not a pallindrome");
+		}
+	}
+
+}
