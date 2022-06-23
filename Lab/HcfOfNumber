@@ -1,0 +1,27 @@
+/*
+ * @Gaurav_kumar
+ */
+package javapgm;
+
+import java.util.*;
+
+public class HcfOfNumber {
+
+	public static void main(String[] args) {
+		logic(); // calling the logic method 
+
+	}
+	public static void logic() {
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Print a and b :");
+		int a= sc.nextInt();
+		int b= sc.nextInt();
+		int r;
+		while(a%b !=0) {
+			r=a%b; //stores the remainder of a/b
+			a=b; 
+			b=r;
+			
+		}
+		System.out.println("The heighest common factor of the numbers is :" +a);
+	}
