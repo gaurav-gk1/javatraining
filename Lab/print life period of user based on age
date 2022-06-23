@@ -12,7 +12,7 @@ senior citizen 60 above
 
 ANSWER
 import java.util.*;
-public class example {
+public class LifePeriod {
 
 	public static void main(String[] args) {
 	
