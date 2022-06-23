@@ -1,0 +1,29 @@
+/*
+ * @Gaurav_kumar
+ */
+package javapgm;
+
+public class PrimeOrNot {
+
+	public static void main(String[] args) {
+		logic(); //calling logic method
+
+	}
+	public static void logic() {
+		int a=12; // number to be checked
+		int i,j=0;
+		
+		for (i=2;i<=a-1;i++) {
+			if (a%i==0) {
+				j=j+1; 
+			}
+		}
+		if(j>0) {
+			System.out.println("The number entered is not prime");
+		}
+		else {
+			System.out.println("The number entered is prime");
+		}
+	}
+
+}
