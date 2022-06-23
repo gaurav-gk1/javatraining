@@ -1,0 +1,28 @@
+ * @Gaurav_kumar
+ */
+package javapgm;
+
+import java.util.*;
+public class SumOfSeries {
+
+	public static void main(String[] args) {
+	logic(); //calling logic method	
+
+	}
+	public static void logic() {
+		float a=0;
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter a number");
+		int n= sc.nextInt(); //limit till the numbers to be added
+		
+		for(int i=1;i<=n;i++) {
+			a= a+ (float)1/i;
+
+			
+		}
+		System.out.println(a);
+		
+	}
+	
+
+}
