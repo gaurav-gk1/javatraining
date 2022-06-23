@@ -6,7 +6,7 @@ decrpyt it to show the corrent grade.
 ANSWER
 package javapgm;
 import java.util.*;
-public class Example {
+public class EncryptDecrypt {
 
 	public static void main(String[] args) {
 		char y='P';
