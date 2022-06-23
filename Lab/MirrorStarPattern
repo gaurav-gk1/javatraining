@@ -1,0 +1,30 @@
+/*
+ * @Gaurav_kumar
+ */
+package javapgm;
+
+public class MirrorStarPattern {
+
+	public static void main(String[] args) {
+		logic(); //calling logic method
+	}
+	public static void logic() {
+		for(int i=1;i<=5;i++) {
+			
+			for(int j=4;j>=i;j--) {
+				//entering this loop prints spaces as required 
+				
+				System.out.print(" ");
+			}
+			for(int k=1;k<=i;k++){
+				//entering this loop prints stars as required 
+			
+				System.out.print("*");
+			}
+			System.out.println();
+			
+		}
+		
+	}
+
+}
