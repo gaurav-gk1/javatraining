@@ -1,0 +1,33 @@
+/*
+ * @Gaurav_kumar
+ */
+package javapgm;
+
+public class GratestAmongFourNumbers {
+
+	public static void main(String[] args) {
+	logic();  //calling the logic method
+	}
+	
+	//creating new method to implement logic
+	public static void logic() {
+		int x=5,y=6,z=7,a=10;
+		
+		//to check the greatest among 4 numbers using logical operators
+		if (x>y && x>z && x>a) {
+			System.out.println("x is the laregest number"+x);
+		}
+		else if (y>x && y>z && y>a) {
+			System.out.println("y is the largest nummber"+y);
+		}
+		else if(z>x && z>y && z>a){
+			System.out.println("z is the largest number"+z);
+		}
+		else {
+			System.out.println("a is the largest number :"+a);
+	}
+	}
+
+
+
+}
