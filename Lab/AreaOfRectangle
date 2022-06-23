@@ -1,0 +1,19 @@
+/*
+ * @Gaurav_kumar
+ */
+package javapgm;
+
+public class AreaOfRectangle {
+
+	public static void main(String[] args) {
+		logic();//calling the logic method
+
+	}
+	public static void logic() {
+		int l=2,b=9;
+		int area=l*b;
+		System.out.println("area of rectangle is :"+area);
+		
+	}
+
+}
