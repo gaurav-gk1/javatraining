@@ -1,0 +1,21 @@
+/*
+ * @Gaurav_kumar
+ */
+package javapgm;
+
+public class MultipleOfEight {
+
+	public static void main(String[] args) {
+		logic();//calling the logic method
+
+	}
+	public static void logic() {
+		int m;
+		for(int i=1;i<=10;i++) {
+			m=i*8;
+			System.out.println(m);
+		}
+		
+	}
+
+}
