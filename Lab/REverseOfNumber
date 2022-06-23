@@ -1,0 +1,38 @@
+/*
+ * @Gaurav_Kumar
+ */
+package javapgm;
+
+import java.util.*;
+
+public class ReverseOfNumber {
+
+	public static void main(String[] args) {
+		logic();
+	}
+	public static void logic() {
+		
+	
+		int n, r, s = 0, x;
+
+		// takes input from user to enter a number
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number :");
+		n = sc.nextInt();
+
+		// initializes value of n to x
+		x = n;
+		
+		// loop separates each digit of the number and reverse it
+		while (n != 0) {
+			r = n % 10;
+			s = (s * 10) + r;
+			n = n / 10;
+		}
+
+		System.out.println("Original number is :" + x);
+
+		System.out.println("Reversed number is :" + s);
+	}
+
+}
