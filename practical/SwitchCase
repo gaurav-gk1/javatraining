@@ -1,0 +1,69 @@
+public class SwitchCase {
+
+	public static void main(String[] args) {
+		int year = 3 ; 
+		char stream='c'  ;
+		switch(year) {
+		case 1:
+			System.out.println("Maths,English,staitstics");
+			break;
+		case 2:
+			switch (stream) {
+			case 'c':
+				System.out.println("c programming");
+				System.out.println("maths ");
+				break;
+			case 'e':
+				System.out.println("elctronics");
+				System.out.println("maths");
+				break;
+			case 'm':
+				System.out.println("thermodtnamics");
+				System.out.println("maths");
+				break;
+			default:
+				System.out.println("invalid input");break;}
+			break;
+		case 3:
+			switch (stream) {
+			case 'c':
+				System.out.println("java");
+				System.out.println("python ");
+				break;
+			case 'e':
+				System.out.println("digital communication");
+				System.out.println("maths");
+				break;
+			case 'm':
+				System.out.println("machanics architecture");
+				System.out.println("maths");
+				break;
+			default:
+				System.out.println("invalid input");
+				break;}
+			break;
+		case 4:
+			switch (stream) {
+			case 'c':
+				System.out.println("web programming");
+				System.out.println("maths ");
+				break;
+			case 'e':
+				System.out.println("embeded sys");
+				System.out.println("efg");
+				break;
+			case 'm':
+				System.out.println("project");
+				System.out.println("abc");
+				break;
+			default:
+				System.out.println("invalid input");
+				break;}
+
+		
+		}
+		
+
+	}
+
+}
