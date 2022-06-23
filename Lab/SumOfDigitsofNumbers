@@ -1,0 +1,36 @@
+/*
+ * @Gaurav_kumar
+ */
+package javapgm;
+
+import java.util.Scanner;
+
+public class SumOfDigitsOfNumber {
+
+	public static void main(String[] args) {
+		logic();
+
+	}
+	public static void logic() {
+		
+		
+		int n, r, s = 0;
+
+		// takes input from user to enter a number
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number :");
+		n = sc.nextInt();
+		
+		// loop separates each digit of the number and reverse it
+		while (n != 0) {
+			r = n % 10;
+			s = s + r;
+			n = n / 10;
+		}
+
+		System.out.println("Sum of digits is :" + s);
+
+		
+	}
+
+}
