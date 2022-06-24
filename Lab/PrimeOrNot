@@ -10,12 +10,12 @@ public class PrimeOrNot {
 
 	}
 	public static void logic() {
-		int a=12; // number to be checked
+		int a=7; // number to be checked
 		int i,j=0;
 		
 		for (i=2;i<=a/2;i++) {
 			if (a%i==0) {
-				j=j+1; 
+				j=j+1; //checks if the number has entered if condition
 			}
 		}
 		if(j>0) {
