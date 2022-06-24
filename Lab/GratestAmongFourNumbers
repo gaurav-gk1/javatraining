@@ -11,23 +11,33 @@ public class GratestAmongFourNumbers {
 	
 	//creating new method to implement logic
 	public static void logic() {
-		int x=5,y=6,z=7,a=10;
+		int x=21,y=6,z=7,a=10;
 		
 		//to check the greatest among 4 numbers using logical operators
-		if (x>y && x>z && x>a) {
-			System.out.println("x is the laregest number"+x);
+		if (x>y) {
+			if(x>z)
+			{
+				if(x>a) {
+				System.out.println("x is the laregest number"+x);
+				}
+				else {
+					System.out.println("a is the largest number :"+a);
+			}
+			}
 		}
-		else if (y>z && y>a) {
-			System.out.println("y is the largest nummber"+y);
+		else if (y>z) {
+			if(y>a) {
+			System.out.println("y is the largest nummber"+y);}
+			else {
+				System.out.println("a is the largest number :"+a);
 		}
-		else if(z>x && z>a){
-			System.out.println("z is the largest number"+z);
 		}
-		else {
-			System.out.println("a is the largest number :"+a);
+		else if(z>a) {
+			System.out.println("z is the largest number"+z);}
+			else {
+				System.out.println("a is the largest number :"+a);
+		}
+		
 	}
-	}
-
-
 
 }
