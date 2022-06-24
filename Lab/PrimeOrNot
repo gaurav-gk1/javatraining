@@ -13,7 +13,7 @@ public class PrimeOrNot {
 		int a=12; // number to be checked
 		int i,j=0;
 		
-		for (i=2;i<=a-1;i++) {
+		for (i=2;i<=a/2;i++) {
 			if (a%i==0) {
 				j=j+1; 
 			}
