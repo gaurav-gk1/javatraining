@@ -17,10 +17,10 @@ public class GratestAmongFourNumbers {
 		if (x>y && x>z && x>a) {
 			System.out.println("x is the laregest number"+x);
 		}
-		else if (y>x && y>z && y>a) {
+		else if (y>z && y>a) {
 			System.out.println("y is the largest nummber"+y);
 		}
-		else if(z>x && z>y && z>a){
+		else if(z>x && z>a){
 			System.out.println("z is the largest number"+z);
 		}
 		else {
