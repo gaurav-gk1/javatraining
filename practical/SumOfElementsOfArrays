@@ -1,0 +1,36 @@
+/*
+ * @Gaurav_kumar
+ */
+package javapgm;
+
+import java.util.Scanner;
+
+public class SumOfElementsOfArrays {
+
+	public static void main(String[] args) {
+		logic();  // calling the logic method
+		
+
+	}
+	public static void logic() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter number of elements: ");
+		int x = sc.nextInt();
+		int []a= new int[x];  //lets user choose the number of elements in the array
+		int c=0;
+		float p;
+		 for(int i=0;i<x;i++){ //for reading array
+			 a[i]=sc.nextInt();   
+			 c=c+a[i];
+	      
+	     
+		 }
+	      
+	
+			 System.out.println(c);
+			 p=c/50;
+			 System.out.println(p);
+		 sc.close();
+	}
+
+}
