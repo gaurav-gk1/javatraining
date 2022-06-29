@@ -1,0 +1,30 @@
+/*
+ * @Gaurav_kumar
+ */
+package javapgm;
+
+public class Arrays {
+	
+	public static void main(String[] args) {
+		CopyArray();  // calling CopyArray method
+		
+	}
+	
+	public static void CopyArray() {
+		int i;
+		int []a= {1,2,3,4,5};
+		int []b= new int[a.length]; //creates a array with same size of array'a'.
+		for(i=0;i<a.length;i++) {
+			b[i]=a[i];
+			System.out.print("Array 1 is :"+a[i] );
+			System.out.println("Array 2 is : "+ b[i] );
+			
+		}
+
+		
+		
+	}
+	
+
+
+}
