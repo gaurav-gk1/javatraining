@@ -1,0 +1,31 @@
+/*
+ * @Gaurav_kumar
+ */
+package javapgm;
+import java.util.Scanner;
+
+class AreaOfRectangle{
+	int l ;
+	int b ;
+	int area;
+	public void calculateArea() { 
+		
+		area=l*b;
+		System.out.println("Area is :"+area);
+		
+	}
+}
+public class Area {
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		AreaOfRectangle ra = new AreaOfRectangle();
+		System.out.println("Enter length");
+		ra.l=sc.nextInt();
+		System.out.println("Enter breath");
+		ra.b=sc.nextInt();
+		ra.calculateArea();
+		sc.close();
+		
+	}
+
+}
