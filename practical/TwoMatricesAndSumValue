@@ -1,0 +1,85 @@
+/*
+ *Gaurav_kumar
+ */
+package javapgm;
+
+import java.util.Scanner;
+
+public class TwoMatricesAndSumValue {
+
+	public static void main(String[] args) {
+		logic(); // calling the method 
+
+	}
+	public static void logic() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter number of rows and columns for matrix 1 ");
+		
+		System.out.println("Enter rows of matrix 1 :");
+		int r = sc.nextInt(); //Takes the number of rows from user
+		
+		System.out.println("Enter columns of matrix 1 :"); 
+	    int c= sc.nextInt(); //Takes the number of columns from user
+		
+	    int a[][]= new int[r][c];
+		System.out.println("Enter Elemnts of MATRIX 1:");
+		for (int i=0;i<r;i++) {    // assigns the elements into rows and columns
+			for(int j=0;j<c;j++) {
+				
+				a[i][j]=sc.nextInt(); 
+				
+			}
+			
+			System.out.println();
+		}
+		System.out.println("MATRIX 1");
+		for (int i=0;i<r;i++) {   //prints the matrix
+			for(int j=0;j<c;j++) {
+				
+				System.out.print(" "+a[i][j]);; 
+				
+			}
+			
+			System.out.println();
+		}
+		
+		// logic for second matrix
+		
+		
+		int b[][]= new int[r][c];
+		System.out.println("Enter Elemnts of MATRIX 2 :");
+		
+		int s[][]= new int[r][c];
+		for ( int i=0;i<r;i++) {      // assigns the elements into rows and columns
+			for( int j=0;j<c;j++) {  
+				
+				b[i][j]=sc.nextInt(); 
+				
+			}
+			
+			System.out.println();
+		}
+		System.out.println("MATRIX 2");
+		for ( int i=0;i<r;i++) {  // Prints the matrix
+			for( int j=0;j<c;j++) {
+				
+				System.out.print(" "+b[i][j]);; 
+				
+			}
+			
+			System.out.println();
+		}
+		System.out.println("Sum of MATRIX 1 and MARIX 2");
+		for ( int i=0;i<r;i++) {  // Prints the matrix
+			for( int j=0;j<c;j++) {
+				s[i][j]=a[i][j]+b[i][j];
+				System.out.print(" "+s[i][j]);; 
+				
+			}
+			
+			System.out.println();
+		}
+	sc.close();
+	}
+	
+}
