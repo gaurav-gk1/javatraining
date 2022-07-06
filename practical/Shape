@@ -1,0 +1,21 @@
+/*
+ * @Gaurav_kumar
+ */
+package com.cognisant.shapes;
+
+class Circle{
+	float r;
+	Circle()
+	{
+		this.r=1.5f;
+		System.out.println("radius is :"+r);
+	}
+}
+public class Shape {
+
+	public static void main(String[] args) {
+		Circle c= new Circle();
+		
+	}
+
+}
