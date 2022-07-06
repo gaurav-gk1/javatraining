@@ -1,0 +1,39 @@
+/*
+ * @Gaurav_kumar
+ */
+package javapgm;
+
+class Employee{
+	int id;
+	String name;
+	
+	public void printDetails() {
+		System.out.println("Employee id :" + id +" "+"Employee Name :"+ name);
+		
+	}
+}
+
+public class Customclass {
+
+	
+	 public static void main(String args[]) 
+
+     {
+		 Employee Gaurav = new Employee();
+		 Employee Rahul = new Employee ();
+		 Gaurav.id =1;
+		 Gaurav.name= "GAURAV KUMAR";
+		 
+		 Rahul.id =2;
+		 Rahul.name="RAHUL KUMAR";
+		 
+		 Gaurav.printDetails();
+		 Rahul.printDetails();
+		 
+     }
+		 
+
+      
+}
+
+
