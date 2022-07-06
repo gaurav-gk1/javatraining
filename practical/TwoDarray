@@ -1,0 +1,40 @@
+package javapgm;
+
+import java.util.Scanner;
+
+public class TwoDarray {
+
+	public static void main(String[] args) {
+		logic();
+		
+	}
+	public static void logic() {
+		int i,j;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter number of rows and columns");
+		System.out.println("Enter rows :"); 
+		int r = sc.nextInt(); //Takes the number of rows from user
+		System.out.println("Enter columns :"); 
+	    int c= sc.nextInt(); //Takes the number of columns from user
+		int a[][]= new int[r][c];
+		System.out.println("Enter Elemnts :");
+		for ( i=0;i<r;i++) {
+			for( j=0;j<c;j++) {
+				
+				a[i][j]=sc.nextInt(); 
+				
+			}
+			
+			System.out.println();
+		}
+		for ( i=0;i<r;i++) {
+			for( j=0;j<c;j++) {
+				System.out.print(" "+a[i][j]);; 
+				
+			}
+			
+			System.out.println();
+		}
+	}
+
+}
