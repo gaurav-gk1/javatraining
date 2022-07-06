@@ -1,0 +1,22 @@
+/*
+ * @Gaurav_kumar
+ */
+package com.cognizant.tax;
+
+
+public class TaxCalculator {
+	static float basicsalary =45985f;
+	static float tax=0;
+	
+	public static void calculateTax() {
+		tax = basicsalary*30/100;
+		System.out.println("the tax of employee for "+basicsalary+" is "+tax);
+	}
+
+	public static void main(String[] args) {
+		calculateTax();
+		
+
+	}
+
+}
