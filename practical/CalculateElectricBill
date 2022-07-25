@@ -1,0 +1,45 @@
+package javapgm;
+
+abstract class bill{
+	double units;
+	
+	public abstract void getunits();
+	
+}
+class house extends bill{
+	public void getunits() {
+		units =200;}
+	public void totalBill(int rate){
+		
+	
+		System.out.println("House bill : "+rate*units);
+	}
+}
+class business extends bill{
+	public void getunits() {
+		units=500;}
+	public void totalBill(int rate){
+		
+		System.out.println("business bill : "+rate*units);
+	
+	}
+
+}
+public class CalculateElectricBill  {
+	
+
+	public static void main(String[] args) {
+		house h=new house();
+		h.getunits();
+		h.totalBill(3);
+
+		
+		business b= new business();
+		b.getunits();
+		b.totalBill(3);
+	}
+		
+
+	
+
+}
