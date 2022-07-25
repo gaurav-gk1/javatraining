@@ -1,0 +1,42 @@
+/*
+ * @Gaurav_kumar
+ */
+package javapgm;
+
+import java.util.*;
+
+public class SimpleInterest {
+	static double principle_amount;
+	static int number_of_years;
+	static double simple_interest;
+
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter Priciple Amount");
+		principle_amount = sc.nextInt();	
+		System.out.println("Enter NUmber Of Years");
+		number_of_years= sc.nextInt();
+		calculateSimpleInterest();	
+	}
+	public static void calculateSimpleInterest() {
+		if (principle_amount>100000) {
+			if(number_of_years>10) {
+				simple_interest=principle_amount*number_of_years*10/100;
+				System.out.println("The interest amount of "+principle_amount+" and years "+number_of_years+" is "+simple_interest);}
+			else if (number_of_years<10) {
+				simple_interest=principle_amount*number_of_years*9.5/100;
+				System.out.println("The interest amount of "+principle_amount+" and years "+number_of_years+" is "+simple_interest);}
+			}
+		else if (principle_amount<100000) {
+			if(number_of_years>10) {
+				simple_interest=principle_amount*number_of_years*5/100;
+				System.out.println("The interest amount of "+principle_amount+" and years "+number_of_years+" is "+simple_interest);}
+			else if (number_of_years<10) {
+				simple_interest=principle_amount*number_of_years*4.5/100;
+				System.out.println("The interest amount of "+principle_amount+" and years "+number_of_years+" is "+simple_interest);}
+			}
+		}
+		
+	
+
+}
