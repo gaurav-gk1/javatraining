@@ -1,0 +1,61 @@
+package javapgm;
+import java.util.*;
+
+class Encapsulationex{
+	private int stdid;
+	private String stdname;
+	private String gender;
+	private int standard;
+	
+	Scanner sc=new Scanner(System.in);
+	public void setstdid() {
+		int r=sc.nextInt();
+		stdid=r;
+	}
+	public void getstdid() {
+		System.out.println("id : "+stdid);
+	}
+	public void setstdname() {
+		String n=sc.nextLine();
+		stdname=n;
+	}
+	public void getstdname() {
+		System.out.println("name : "+stdname);
+	}
+	public void setgender() {
+		String g=sc.nextLine();
+		gender=g;
+	}
+	public void getgender() {
+		System.out.println("gender : "+gender);
+	}
+	public void setstandard() {
+		int st=sc.nextInt();
+		standard=st;
+	}
+	public void getstandard() {
+		System.out.println("standard : "+standard);
+	}
+
+
+
+}
+
+public class Student {
+	
+
+	public static void main(String[] args) {
+		Encapsulationex ec= new Encapsulationex();
+		ec.setstdid();
+		ec.getstdid();
+		ec.setstdname();
+		ec.getstdname();
+		ec.setgender();
+		ec.getgender();
+		ec.setstandard();
+		ec.getstandard();
+		
+
+	}
+
+}
