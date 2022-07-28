@@ -1,0 +1,23 @@
+package javapgm;
+
+ class PallindromeString {
+	
+	public static void main (String[] args) {
+			StringBuffer s1=new StringBuffer("madam");
+			String s2=s1.toString();  // converts to literral String 
+			//StringBuffer s3=s1.reverse();
+			//String s4=s3.toString();
+			
+			if (s2.equals(new StringBuffer(s1).reverse().toString())) {
+				System.out.println("Palindrome");
+				
+			}
+			else {
+				System.out.println("Not a pallindrome");
+			}
+	}
+ 
+				 
+		 
+}
+		
