@@ -1,0 +1,246 @@
+package com.jdbc;
+import java.sql.*;
+
+public class ConnectDB {
+
+	static Connection con = null;
+	
+	public static Connection dbConnect() {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			
+			
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/anudip", "root", "Pratik@123");
+		}
+		catch (Exception e){
+			System.out.println(e);
+			
+		}
+		
+		return con;
+		
+	}
+
+}
+package com.jdbc;
+
+import java.sql.Connection;
+
+import java.sql.Statement;
+
+public class CreateTable {
+
+	public static void main(String[] args) {
+		
+		Connection conn = ConnectDB.dbConnect();
+//		System.out.println(conn);
+		
+		
+		try {
+			Statement stm = conn.createStatement();
+			String sql = "Create table Employee(Employee_Id int primary key, First_Name varchar(50),Last_Name varchar(50),salary int, joining_date date, Department varchar(50))";
+			
+			int i = stm.executeUpdate(sql);
+			System.out.println(i + " table Created Successfully ");
+		}catch(Exception e ) {
+			System.out.println(e);			
+		}
+		finally {
+			try {
+				conn.close();
+			}catch(Exception e) {
+				
+			}
+		}
+	}
+
+}
+package com.jdbc;
+
+import java.sql.Connection;
+import java.sql.Statement;
+
+public class InsertTable1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Connection conn = ConnectDB.dbConnect();
+		
+		try {
+		Statement stm = conn.createStatement();
+		String sql  = "insert into Employee values(1, 'Pratik', 'Dive','50000', '20-1-20', 'tech team')";
+		String sql1 = "insert into Employee values(2, 'roshan', 'Rathod','36000', '22-5-12', 'Finance')";
+		String sql2 = "insert into Employee values(3, 'pawar', 'Pawar','40000', '19-6-10', 'tech team')";
+		String sql3 = "insert into Employee values(4, 'yash', 'Rathod','56000', '21-6-25', 'tech team')";
+		String sql4 = "insert into Employee values(5, 'ritesh', 'deshmukh','23000', '22-2-20', 'finance')";
+		String sql5 = "insert into Employee values(6, 'chandan', 'Rajput','63000', '18-3-16', 'finance')";
+		String sql6 = "insert into Employee values(7, 'raghav', 'Wagh','12000', '22-4-10', 'finance')";
+		String sql7 = "insert into Employee values(8, 'Rohit', 'Patil','23000', '17-1-11', 'finance')";
+		String sql8 = "insert into Employee values(9, 'shubham', 'Netke','30000', '20-5-25', 'tech team')";
+		String sql9 = "insert into Employee values(10, 'Nikhil', 'more','25000', '20-4-10', 'tech team')";
+		
+		int i;
+//		int i = stm.executeUpdate(sql);
+		 i = stm.executeUpdate(sql1);
+		 i = stm.executeUpdate(sql2);
+		 i = stm.executeUpdate(sql3);
+		 i = stm.executeUpdate(sql4);
+		 i = stm.executeUpdate(sql5);
+		 i = stm.executeUpdate(sql6);
+		 i = stm.executeUpdate(sql7);
+		 i = stm.executeUpdate(sql8);
+		 i = stm.executeUpdate(sql9);
+		
+		System.out.println(i+ "values Inserted" );
+		
+		
+	}catch(Exception e) {
+		System.out.println(e);
+		
+	}
+	
+	
+	
+	
+	finally {
+		try {
+			conn.close();
+		}catch(Exception e) {
+			
+		}
+	}
+	}
+
+}
+
+package com.jdbc;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class FetchRecords {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		
+		try {Connection conn = ConnectDB.dbConnect();
+		
+		String query ="select First_Name from Employee where department = 'tech team'";
+		Statement st = conn.createStatement();
+		ResultSet rs = st.executeQuery(query);
+		while(rs.next()) {
+		
+		String name = rs.getString("First_Name");
+		System.out.println(name);
+		}
+			
+
+		}catch(Exception e) {
+			System.out.println(e);
+		}
+	}
+
+}
+String query ="select First_Name, last_name from Employee where salary > 20000";
+Statement st = conn.createStatement();
+		ResultSet rs = st.executeQuery(query);
+		while(rs.next()) {
+		
+		String name = rs.getString("First_Name" );
+		String last_name = rs.getString("Last_Name");
+		System.out.println(name +" "+ last_name);
+		}
+
+String query ="select UPPER(First_Name) as Name from employee";
+		Statement st = conn.createStatement();
+		ResultSet rs = st.executeQuery(query);
+		while(rs.next()) {
+		
+		String name = rs.getString("Name");
+		
+		System.out.println(name);
+		}
+String query ="select SUBSTRING(First_Name, 1, 5) as Name from employee";
+		Statement st = conn.createStatement();
+		ResultSet rs = st.executeQuery(query);
+		while(rs.next()) {
+		
+		String name = rs.getString("Name");
+		
+		System.out.println(name);
+		}
+String query ="select RTRIM(First_Name)as Name from Employee;";
+		Statement st = conn.createStatement();
+		ResultSet rs = st.executeQuery(query);
+		while(rs.next()) {
+		
+		String name = rs.getString("Name");
+		
+		System.out.println(name);
+		}
+String query ="select LTRIM(First_Name)as Name from Employee;";
+		Statement st = conn.createStatement();
+		ResultSet rs = st.executeQuery(query);
+		while(rs.next()) {
+		
+		String name = rs.getString("Name");
+		
+		System.out.println(name);
+		}
+String query ="SELECT  first_name, last_name  from employee where length(First_Name) = 4 and First_Name like '%n'";
+		
+		Statement st = conn.createStatement();
+		ResultSet rs = st.executeQuery(query);
+		while(rs.next()) {
+		
+		String name = rs.getString("First_Name");
+		String lastname = rs.getString("Last_Name");
+		
+		System.out.println(name + lastname);
+		}
+String query ="select * from Employee where salary between 20000 and 50000";
+		Statement st = conn.createStatement();
+		ResultSet rs = st.executeQuery(query);
+		while(rs.next()) {
+		
+		String name = rs.getString("First_Name");
+
+		
+		System.out.println(name);
+		}
+String query ="select * from employee where year(joining_date)='2019'";
+		Statement st = conn.createStatement();
+		ResultSet rs = st.executeQuery(query);
+		while(rs.next()) {
+		
+		String name = rs.getString("First_Name");
+
+String query ="select first_name from employee where first_name like '%tik';";
+		Statement st = conn.createStatement();
+		ResultSet rs = st.executeQuery(query);
+		while(rs.next()) {
+		
+		String name = rs.getString("First_Name");
+
+		
+		System.out.println(name);
+		}
+String query ="select * from Employee order by salary desc";
+		Statement st = conn.createStatement();
+		ResultSet rs = st.executeQuery(query);
+		while(rs.next()) {
+		
+		String name = rs.getString("salary");
+
+		
+		System.out.println(name);
+		}
+		
+		
+		System.out.println(name);
+		}
