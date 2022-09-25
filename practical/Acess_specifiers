@@ -1,0 +1,39 @@
+package javapgm;
+class Employee{
+	private int id;
+	private String name;
+	public void setId(int i)
+	{
+		id = i;
+		
+	}
+	public void setName(String m)
+	{
+		name = m;
+	}
+	public int getId()
+	{
+		return id;
+	}
+	public String getName()
+	{
+		return name;
+	}
+	
+}
+
+public class AccessModifiers {
+
+	public static void main(String[] args) {
+		
+		Employee lahoo = new Employee();
+		Employee rohit = new Employee();
+		
+		lahoo.setName("lahoo chavan");
+		rohit.setId(12);
+		rohit.setName("Rohit Rathod");
+		System.out.println(lahoo.getId());
+		System.out.println(lahoo.getName());
+		System.out.println(rohit.getId());
+		System.out.println(rohit.getName());
+}}
