@@ -1,0 +1,93 @@
+package javapgm;
+class CountryNotValidException extends Exception{
+	public CountryNotValidException(String str) {
+		
+		super(str);
+	}
+	
+}
+
+class EmployeeNameInvalidException extends Exception{
+	public EmployeeNameInvalidException(String str) {
+		super(str);
+	}
+}
+
+class TaxNotEligibleException extends Exception{
+	public TaxNotEligibleException(String str) {
+		super(str);
+	}
+}
+
+
+class TaxCalculator  {
+	
+	public double calculateTax (String empName, boolean isIndian, double empSal) throws TaxNotEligibleException {
+		double TaxAmount = 0;
+		
+		try {
+			if(isIndian != false) {
+				throw new CountryNotValidException("The employee should be an Indian citizen for calculating tax”");
+				
+			}
+		}catch (CountryNotValidException e){
+			
+		}
+			
+		
+		
+		try {
+			if(empName == null) {
+				throw new EmployeeNameInvalidException("The employee name cannot be empty”");
+			}
+		}
+		catch(EmployeeNameInvalidException e) {
+			
+		}
+		
+		try {
+		
+		if(empSal>100000 && isIndian == true) {
+			TaxAmount = empSal*8/100;
+			System.out.println(TaxAmount);
+		}
+		else if(empSal<100000 || empSal >50000 && isIndian == true) {
+			TaxAmount =empSal *6/100 ;
+			System.out.println(TaxAmount);
+		}
+		else if(empSal<50000 || empSal >30000 && isIndian == true) {
+			TaxAmount =empSal *5/100 ;
+			System.out.println(TaxAmount);
+		}
+		else if(empSal<30000 || empSal >10000 && isIndian == true) {
+			TaxAmount =empSal *4/100 ;
+			System.out.println(TaxAmount);
+		}
+		
+		else {
+			throw new TaxNotEligibleException("The employee does not need to pay tax”");
+		}
+		
+		}finally {
+			
+		}
+		
+		return TaxAmount;
+	}
+}
+
+public class CalculatorSimulator {
+
+	public static void main(String[] args) throws TaxNotEligibleException {
+		// TODO Auto-generated method stub
+		
+		
+		TaxCalculator T1 = new TaxCalculator();
+		T1.calculateTax("Ron", false, 34000);
+		T1.calculateTax("Tim", true, 1000);
+		
+		
+
+	}
+
+}
